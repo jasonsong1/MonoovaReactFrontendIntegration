@@ -1,0 +1,129 @@
+.ListOfEndpoints{
+    width: 50px;
+    
+}
+.ListofEndpointsize{
+width: 260px;
+height: 100vh;
+border:2px solid red;
+background: rgb(241, 236, 236);
+}
+
+
+.ListofEndpointsize div{
+    padding:10px 10px;
+
+}
+
+.logo{
+    margin: 20px 20px 0px 0px;
+}
+
+.search-area{
+    margin-left: 10px;
+    display: flex;
+ 
+}
+
+.search-areaStyle{
+    border:none;
+    border-bottom: 2px solid gray;
+}
+
+
+.main-area{
+    display:flex;
+
+}
+
+@media (max-width: 800px){
+    .ListOfEndpoints{
+        display:none;
+    }
+}
+
+.endpoint-Header{
+    display:flex;
+margin: 5px 0px;
+border: 1px solid #11171A;
+background-color: #11171A;
+padding: 10px 10px;
+max-width: 50rem;
+justify-content: space-between;
+
+}
+
+
+.endpoint-Header div{
+    color: white
+}
+
+.listlayout{
+    min-width: 280px;
+}
+
+.getButton{
+    font-size: 0.929em;
+    line-height: 20px;
+    background-color: rgb(47, 129, 50);
+    color: rgb(255, 255, 255);
+    padding: 3px 10px;
+    margin-right: 25px;
+    border-radius: 10px;
+    width:50px;
+    height: 30px;
+}
+
+.sumbitButton{
+    margin-left: 20px;
+    font-size: 0.929em;
+    line-height: 20px;
+    background-color: rgba(217, 13, 13, 0.814);
+    color: rgb(255, 255, 255);
+    padding: 3px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    width:70px;
+    height: 30px;
+    
+}
+
+.requestURLColor{
+    margin-bottom: 15px;
+    border: 1px solid #11171A;
+    background-color: #11171A;
+    color:white
+   
+}
+
+.inputArea div{
+    margin: 10px 0px;
+    background-color: #11171A;
+    color: white;
+    
+}
+.inputArea input{
+    
+    min-width: 450px;
+}
+
+.Strongfont{
+    color: red;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 11px;
+ }
+
+ .accordion-body {
+    background-color: #11171A;
+    padding: var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x);
+    
+}
+
+.endpoint-style{
+    background-color: #263238;
+    border-radius: 20px;
+    width: 600px;
+    height: 400px;
+    padding: 20px 20px;
+    
+}
