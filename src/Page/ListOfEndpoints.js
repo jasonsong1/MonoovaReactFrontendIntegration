@@ -6,49 +6,54 @@ import { Link } from 'react-router-dom'
 
 const ListOfEndpoints = () => {
 
-    const listofendpoints =[
-    "Process a transaction",
-    "Get transaction status by UID",
-    "Create a Automatcher (Receivables) Account",
-    "Get Account Status By BankAccount",
-    "List Accounts",
-    "V6 Report",
-    "H",
-    "G",
-    "G",
-    "G",
-    "G",
-    "G",
-    "G",
-    "G",
-    "G",]
+
   return (
-         <div className='ListOfEndpoints' >
+    <div className='ListOfEndpoints' >
+      <div>
+        <img width={220}
+          height={80}
+          className='logo'
+          src='https://movdpwebsiteprodae.blob.core.windows.net/images/Monoova.png' />
+      </div>
+
+      <div className='search-area'>
+        <div>
+          <FontAwesomeIcon icon={faMagnifyingGlass} /></div>
+        <div> <input type='text'
+          className='search-areaStyle' /></div>
+
+
+      </div>
+      <div>
+        <ul className='ListofEndpointsize'>
+          <li>
+            <a href='GettransactionstatusbyUID'>
+              <span className='getButton'>GET</span>
+              Get transaction status by UID
+            </a>
+          </li>
+
+          <li>
             <div>
-                <img width={220} 
-                height={80}
-                className='logo'
-                src='https://movdpwebsiteprodae.blob.core.windows.net/images/Monoova.png'/>
+              <div >
+                <span className='getButton'>GET</span>
+              </div>
+              <div>
+                <a href='GetUnclearedTransactionsbyDate'>
+                  Get Uncleared Transactions by Date
+                </a>
+              </div>
             </div>
 
-            <div className='search-area'>
-            <div>
-            <FontAwesomeIcon icon={faMagnifyingGlass} /></div>
-            <div> <input type='text'
-                className='search-areaStyle'/></div>
-               
-                      
-            </div>
-        
-            <div className='ListofEndpointsize'>
-            {listofendpoints.map((item)=>(
-            <div>{item}</div>
-            ))}
-            
-            </div>
-            
-         </div>
- 
+          </li>
+          <li>3</li>
+          <li>4</li>
+
+        </ul>
+
+      </div>
+    </div>
+
   )
 }
 

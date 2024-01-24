@@ -3,7 +3,7 @@ import React from 'react'
 const MobileUI = () => {
   return (
     <div>
-      MobileUI
+      MobileUI test
     </div>
   )
 }

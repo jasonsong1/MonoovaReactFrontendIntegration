@@ -1,19 +1,34 @@
+body{
+    margin: 0px;
+}
+
 .ListOfEndpoints{
     width: 50px;
     
 }
 .ListofEndpointsize{
-width: 260px;
+width: 340px;
 height: 100vh;
 border:2px solid red;
 background: rgb(241, 236, 236);
-}
-
-
-.ListofEndpointsize div{
-    padding:10px 10px;
+padding-right: 100px;
+padding-inline-start: 0;
 
 }
+
+.ListofEndpointsize li{
+    list-style-type: none;
+    width: 335px;
+    height: 4.5rem;
+    border: 1px solid black;
+    padding:18px 10px 0px 10px;
+  font-size: 18px;
+}
+
+.ListofEndpointsize li div{
+display: flex;
+}
+
 
 .logo{
     margin: 20px 20px 0px 0px;
@@ -33,10 +48,10 @@ background: rgb(241, 236, 236);
 
 .main-area{
     display:flex;
-
+ 
 }
 
-@media (max-width: 800px){
+@media (max-width: 1000px){
     .ListOfEndpoints{
         display:none;
     }
@@ -59,7 +74,7 @@ justify-content: space-between;
 }
 
 .listlayout{
-    min-width: 280px;
+    min-width: 350px;
 }
 
 .getButton{
@@ -125,5 +140,14 @@ justify-content: space-between;
     width: 600px;
     height: 400px;
     padding: 20px 20px;
+    margin-left: 30px;
     
+}
+
+.mainpageindividualendpoint{
+    margin-top: 100px;
+}
+
+.mainpageindividualendpoint section{
+    margin-top: 20px;
 }
