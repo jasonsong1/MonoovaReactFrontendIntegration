@@ -3,12 +3,14 @@ import Accordion from 'react-bootstrap/Accordion';
 import { useState } from 'react';
 import APIresponse from '../responseUI/APIresponse';
 import MobileUI from '../responseUI/MobileUI';
+import { Col, Row } from 'react-bootstrap'
 
 const GettransactionstatusbyUID = () => {
 
 const [apiKey,setapiKey]=useState('')
 const [uniqueReference, setUniqueReference] = useState('');
 const [result, setResult] = useState(null);
+const [isSubmitted, setisSubmitted] = useState(false)
 
 const submitAPI=async()=>{
   const response = await fetch(`https://api.m-pay.com.au/financial/v2/status/${uniqueReference}`,{
@@ -20,12 +22,15 @@ const submitAPI=async()=>{
   })
 
   const data = await response.json();
-  setResult(data)
+  setResult(data);
+  setisSubmitted(true);
 }
 
 
   return (
-    <div className='endpoint-style'>
+    <div className='responseUIFlex'>
+    <div className='endpoint-style' id="GettransactionstatusbyUID">
+      
         <div className='endpoint-Header'>
             <div className='getButton'>GET</div>
             <div>GetTransactionStatusByUID</div>
@@ -72,17 +77,15 @@ const submitAPI=async()=>{
       </Accordion.Item>
     </Accordion>
  
-
-
-
+        </div>
         </div>
 
-
-
-        <APIresponse result={result}/>
-        <MobileUI result={result}/>
+        <div> 
+          {isSubmitted && <APIresponse result={result} className="mediaflexcolumn"/>}
+        </div>
+        {/* <div><MobileUI result={result}/></div> */}
+     
     </div>
-
     
   )
 }

@@ -1,5 +1,6 @@
 body{
     margin: 0px;
+    height: 100vh;
 }
 
 .ListOfEndpoints{
@@ -14,6 +15,10 @@ background: rgb(241, 236, 236);
 padding-right: 100px;
 padding-inline-start: 0;
 
+}
+
+li{
+    cursor: pointer;
 }
 
 .ListofEndpointsize li{
@@ -77,6 +82,12 @@ justify-content: space-between;
     min-width: 350px;
 }
 
+
+@media (max-width: 1000px){
+    .listlayout{
+        display:none;
+    }
+}
 .getButton{
     font-size: 0.929em;
     line-height: 20px;
@@ -138,16 +149,80 @@ justify-content: space-between;
     background-color: #263238;
     border-radius: 20px;
     width: 600px;
-    height: 400px;
+    /* height: 400px; */
     padding: 20px 20px;
     margin-left: 30px;
+    margin-top: 30px;
     
 }
 
 .mainpageindividualendpoint{
-    margin-top: 100px;
+    width: 83.5vw;
+    display: flex;
+    flex-direction: column;
 }
 
-.mainpageindividualendpoint section{
-    margin-top: 20px;
+.EMPTY{
+    width: 83.5vw;
+    border: 1px solid black;
+    height: 100px;
 }
+
+
+/* response UI CSS */
+.responseBody{
+    color: rgb(160, 251, 170);
+    width:600px;
+    /* border: 2px solid black;
+    background-color: rgb(17, 23, 26); */
+    background-image: url(https://assets-global.website-files.com/647084263cf6196de949920f/647084263cf6196de9499292_monoova_desktop_home_hero.png);
+   background-size: cover;
+    margin-top: 30px;
+    margin: 30px 30px;
+    padding: 20px 40px;
+    border-radius: 20px;
+    height: 400px;
+    font-size: 18px;
+
+}
+
+/* .responseBody div{
+    padding-top: 3px;
+} */
+
+.responseUIFlex{
+    display: flex;
+    
+}
+
+
+@media (max-width: 1000px){
+    .responseUIFlex{
+        display:flex;
+        flex-direction:column;
+    }
+}
+
+
+
+
+
+.postButton{
+    
+    font-size: 0.9em;
+    line-height: 20px;
+    background-color: #186FAF;
+    color: rgb(255, 255, 255);
+    padding: 3px 8px;
+    margin-right: 25px;
+    border-radius: 10px;
+    width:50px;
+    height: 30px;
+ }
+
+
+ .mandatoryicon{
+    color: red;
+    font-size: 25px;
+    margin-left: 10px;
+ }
