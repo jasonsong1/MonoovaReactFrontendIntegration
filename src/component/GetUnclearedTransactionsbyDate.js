@@ -51,7 +51,7 @@ const GetUnclearedTransactionsbyDate = () => {
               <Accordion.Header>Click to open</Accordion.Header>
               <Accordion.Body>
                 <form className='inputArea'>
-                  <div> API Key <strong className='Strongfont'>Required -57B17E5A-0375-4EA0-8059-420133765007 </strong>
+                  <div> API Key <strong className='Strongfont'>Required</strong>
 
                     <div>
                       <input type='text'

@@ -32,8 +32,9 @@ const ListOfEndpoints = () => {
               <div>
                 <span className='getButton'>GET</span>
               </div>
-              
+              <div>
               <Link to="GettransactionstatusbyUID" spy={true} smooth={true} offset={0} duration={550}> Get transaction status by UID</Link> 
+            </div>
             </div>
 
           </li>
@@ -62,20 +63,19 @@ const ListOfEndpoints = () => {
 
 
           <li>
-            <ul> groupoption
-              <li>
-              <div>
+            <div>
               <div>
                 <div className='postButton'>POST</div>
               </div>
               <div>
-               <Link to="BSBNPPPayment" spy={true} smooth={true} offset={0} duration={550}> Process a transaction</Link> 
+              <Link to="BSBNPPPayment" spy={true} smooth={true} offset={0} duration={550}> Process a transaction</Link> 
               </div>
             </div>
-              </li>
-            </ul>
           </li>
         </ul>
+
+
+
 
       </div>
     </div>

@@ -18,10 +18,17 @@ const PaymentResponse = ({result}) => {
 
         </>
       )}
-      {/* <>
-        {result && result.status == 'MerchantFailedToLogin' && <div>check your API key. It is invalid API Key</div>}
-        {result && result.status == 'UniqueIdNotFound' && <div>Invalid unique reference. please re-enter valid unique value </div>}
-      </> */}
+      <>
+        {result && result.status == 'MerchantFailedToLogin' && <div>Check your API key. It is invalid API Key</div>}
+        {result && result.status == 'InvalidDisbursementMethod' && <div>The disbursement method has an unknown value</div>}
+        {result && result.status == 'FinancialValidateDisbursementNppCreditBankAccountDetailsAreInvalid' && <div>Check your BSB and Account number</div>}
+        {result && result.status == 'FinancialValidateDisbursementNppCreditPayIdDetailsAreInvalid' && <div>Invalid PayID or payIdType or account name</div>}
+        {result && result.status == 'RequestBodyIsNotTheExpectedType' && <div>The body of the request was not the expected type, has price been included in the payload?</div>}
+
+      
+      
+        
+      </>
     </div>
   )
 }
