@@ -202,8 +202,15 @@ margin: 20px 0px;
 }
 
 .IntroHeader3{
-    margin-left: 80px; 
+    margin-left: 80px;  
 }
+
+@media (max-width: 1000px){
+    .IntroHeader3{
+        margin-top: 100px;
+    }
+}
+
 
 
 /* response UI CSS */

@@ -11,6 +11,8 @@ import BSBNPPPayment from './component/ProcessAtransaction/BSBNPPPayment';
 import PAYIDPayment from './component/ProcessAtransaction/PAYIDPayment';
 import ListofPaymentRails from './component/ListofPaymentRails';
 import CreateaAutomatcherAccount from './component/CreateaAutomatcherAccount';
+import RegisterPayID from './component/RegisterPayID';
+import V6Receivablereport from './component/V6Receivablereport';
 
 
 function App() {
@@ -58,9 +60,8 @@ function App() {
           
           <Col><ListofPaymentRails/></Col>
           <Col><CreateaAutomatcherAccount/></Col>
-
-          <Col><div className='EMPTY'>EMPTY</div></Col>
-          <Col><div className='EMPTY'>EMPTY</div></Col>
+          <Col><RegisterPayID/></Col>
+          <Col><V6Receivablereport/></Col>
           <Col><div className='EMPTY'>EMPTY</div></Col>
           <Col><div className='EMPTY'>EMPTY</div></Col>
           <Col><div className='EMPTY'>EMPTY</div></Col>

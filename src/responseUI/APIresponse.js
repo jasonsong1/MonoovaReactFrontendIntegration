@@ -27,8 +27,11 @@ const APIresponse = ({ result }) => {
         {result?.bsb && (<div>"BSB": {result.bsb},</div>)}
         {result?.clientUniqueId && (<div>"Client Unique Id": {result.clientUniqueId},</div>)}
 
-
-
+{/* Register PayID response */}
+{result?.PayIdDetails.BankAccountNumber && (<div>"Bank Account Number": {result.PayIdDetails.BankAccountNumber},</div>)}
+{result?.PayIdDetails.PayId && (<div>"PayId": {result.PayIdDetails.PayId},</div>)}
+{result?.PayIdDetails.PayIdName && (<div>"PayID Name": {result.PayIdDetails.PayIdName},</div>)}
+{result?.PayIdDetails.PayIdStatus && (<div>"PayID Status": {result.PayIdDetails.PayIdStatus},</div>)}
 
 {/* ADD BulkDirect Debits */}
         </>

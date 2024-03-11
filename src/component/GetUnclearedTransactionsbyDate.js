@@ -56,7 +56,7 @@ const GetUnclearedTransactionsbyDate = () => {
                       <div> API Key <strong className='Strongfont'>Required</strong>
                       </div>
                       <div>
-                        <input type='text'
+                        <input type='password'
                           placeholder='Enter your mAccount API Key'
                           value={apiKey}
                           onChange={(e) => setapiKey(e.target.value)}

@@ -140,7 +140,7 @@ const BSBNPPPayment = () => {
 
                     <section>
                       <div>Api Key<strong className='Strongfont'>Required </strong></div>
-                      <input type='text'
+                      <input type='password'
                         placeholder='Enter your Disbursement Method'
                         value={apiKey}
                         onChange={(e) => setapiKey(e.target.value)}

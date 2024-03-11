@@ -84,9 +84,31 @@ const ListOfEndpoints = () => {
               </div>
             </div>
           </li>
+
+          <li>
+            <div>
+              <div>
+                <div className='postButton'>POST</div>
+              </div>
+              <div>
+              <Link to="RegisterPayID" spy={true} smooth={true} offset={0} duration={550}> Register PayID</Link> 
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div>
+              <div>
+                <div className='getButton'>GET</div>
+              </div>
+              <div>
+              <Link to="V6Report" spy={true} smooth={true} offset={0} duration={550}> Report</Link> 
+              </div>
+            </div>
+          </li>
+
+
         </ul>
-
-
       </div>
     </div>
 
