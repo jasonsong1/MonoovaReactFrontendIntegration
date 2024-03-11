@@ -1,39 +1,56 @@
 import React from 'react'
 import Accordion from 'react-bootstrap/Accordion';
 import { useState } from 'react';
-import APIresponse from '../responseUI/APIresponse';
+import V6reportUI from '../responseUI/V6reportUI';
 import ClipLoader from "react-spinners/ClipLoader";
 
 
 const V6Receivablereport = () => {
     const [apiKey, setapiKey] = useState('')
-    const [uniqueReference, setUniqueReference] = useState('');
+    const [reportDate, setreportDate] = useState('');
     const [result, setResult] = useState(null);
     const [isSubmitted, setisSubmitted] = useState(false)
     const [loading, setLoading] = useState(false)
+    const [reportText, setReportText] = useState('');
   
-  
+
+    
   
     const submitAPI = async () => {
-      setLoading(true)
-      const response = await fetch(`https://api.m-pay.com.au/receivables/v6/report/{date}sssssssssssssssssssssssssssssssss`, {
-        method: "GET",
-        headers: {
-          Authorization: `Basic ${btoa(apiKey)}`,
-          'Content-Type': 'application/json',
-        },
-      })
+
+    try {
+        setLoading(true)
+        const response = await fetch(`https://api.m-pay.com.au/receivables/v6/report/${reportDate}`, {
+          method: "GET",
+          headers: {
+            Authorization: `Basic ${btoa(apiKey)}`,
+            'Content-Type': 'application/octet-stream',
+          },
+        });
   
-      const data = await response.json();
-      setResult(data);
-      setisSubmitted(true);
-      setLoading(false)
-    }
-  
-    const resetForm = () => {
-      setisSubmitted(false);
+        if (response.ok) {
+          const reportText = await response.text();
+          console.log("Report:", reportText);
+          setReportText(reportText);
+          setisSubmitted(true);
+          setLoading(false)
+         
+        } else {
+          throw new Error('Failed to fetch report');
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        // Handle errors here
+      }
     };
-  
+
+
+    const resetForm = () => {
+        setisSubmitted(false);
+      };
+
+
+
   
     return (
       <div className='responseUIFlex'>
@@ -66,7 +83,7 @@ const V6Receivablereport = () => {
                 <Accordion.Body>
                   <form className='inputArea'>
                     <div>
-                      <section>API Key <strong className='Strongfont'>Required</strong>
+                      <section>API Key 3CAD4F77-5180-46B5-A67D-74B4D8E52665<strong className='Strongfont'>Required</strong>
   
                         <div>
                           <input type='password'
@@ -78,14 +95,14 @@ const V6Receivablereport = () => {
                       </section>
   
                       <section>
-                        <div>Unique Reference <strong className='Strongfont'>Required</strong></div>
+                        <div>Date 20240311000001 <strong className='Strongfont'>Required</strong></div>
   
   
                         <div>
                           <input type='text'
                             placeholder='Enter your transaction Unique Reference'
-                            value={uniqueReference}
-                            onChange={(e) => setUniqueReference(e.target.value)}></input>
+                            value={reportDate}
+                            onChange={(e) => setreportDate(e.target.value)}></input>
                         </div>
                       </section>
                     </div>
@@ -98,7 +115,7 @@ const V6Receivablereport = () => {
         </div>
   
         <div>
-          {isSubmitted && <APIresponse result={result} className="mediaflexcolumn" />}
+          {isSubmitted && <V6reportUI reportText={reportText} className="mediaflexcolumn" />}
         </div>
         {/* <div><MobileUI result={result}/></div> */}
   
