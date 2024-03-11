@@ -154,9 +154,11 @@ justify-content: space-between;
  .accordion-body {
     background-color: #11171A;
     padding: var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x);
-    
 }
 
+.accordion-body section{
+margin: 20px 0px;
+}
 .endpoint-style{
     background-color: #263238;
 
@@ -291,11 +293,13 @@ justify-content: space-between;
     background: #11171A;
     color: white;
     border-radius: 10px;
-    padding-left: 10px;
+    padding: 5px 15px;
+   
 }
 
 .payIdTypeButtons button:hover{
     background: #186FAF;
+    
 }
 
 .payIdTypeButtons button:focus{
@@ -306,4 +310,7 @@ justify-content: space-between;
     border: white solid 1px;
     background: white;
     border-radius: 20px;
+    padding: 5px 10px;
+    width: 450px;
+    margin: 10px 0px;
 }

@@ -51,26 +51,31 @@ const GetUnclearedTransactionsbyDate = () => {
               <Accordion.Header>Click to open</Accordion.Header>
               <Accordion.Body>
                 <form className='inputArea'>
-                  <div> API Key <strong className='Strongfont'>Required</strong>
+                  <div>
+                    <section>
+                      <div> API Key <strong className='Strongfont'>Required</strong>
+                      </div>
+                      <div>
+                        <input type='text'
+                          placeholder='Enter your mAccount API Key'
+                          value={apiKey}
+                          onChange={(e) => setapiKey(e.target.value)}
+                        ></input>
+                      </div>
+                    </section>
 
-                    <div>
-                      <input type='text'
-                        placeholder='Enter your mAccount API Key'
-                        value={apiKey}
-                        onChange={(e) => setapiKey(e.target.value)}
-                      ></input>
-                    </div>
+                    <section>
+                      <div>
+                        Start Date <strong className='Strongfont'>Required - 01-01-2024</strong>
+                      </div>
 
-                    <div>
-                      Start Date <strong className='Strongfont'>Required - 01-01-2024</strong>
-                    </div>
-
-                    <div>
-                      <input type='text'
-                        placeholder='Enter Start Date'
-                        value={startDate}
-                        onChange={(e) => setstartDate(e.target.value)}></input>
-                    </div>
+                      <div>
+                        <input type='text'
+                          placeholder='Enter Start Date'
+                          value={startDate}
+                          onChange={(e) => setstartDate(e.target.value)}></input>
+                      </div>
+                    </section>
                   </div>
                 </form>
               </Accordion.Body>
@@ -83,9 +88,9 @@ const GetUnclearedTransactionsbyDate = () => {
         </div>
       </div>
 
-      <div> 
-          {isSubmitted && <APIresponse result={result} className="mediaflexcolumn"/>}
-        </div>
+      <div>
+        {isSubmitted && <APIresponse result={result} className="mediaflexcolumn" />}
+      </div>
 
       {/* <div><MobileUI result={result} /></div> */}
     </div>

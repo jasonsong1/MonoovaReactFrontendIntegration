@@ -68,13 +68,23 @@ const ListOfEndpoints = () => {
                 <div className='postButton'>POST</div>
               </div>
               <div>
-              <Link to="BSBNPPPayment" spy={true} smooth={true} offset={0} duration={550}> Process a transaction</Link> 
+              <Link to="PaymentoutRails" spy={true} smooth={true} offset={0} duration={550}> Process a transaction</Link> 
+              </div>
+            </div>
+          </li>
+
+
+          <li>
+            <div>
+              <div>
+                <div className='postButton'>POST</div>
+              </div>
+              <div>
+              <Link to="CreateaAutomatcherAccount" spy={true} smooth={true} offset={0} duration={550}> Create Automatcher Account</Link> 
               </div>
             </div>
           </li>
         </ul>
-
-
 
 
       </div>

@@ -65,7 +65,7 @@ const ListofPaymentRails=()=>{
 
   return (
     <div>
-    <div className='paymentrailstyle'>
+    <div className='paymentrailstyle' id="PaymentoutRails">
     <strong className='paymentraildescription'>Click Payment Rail that you would like to test</strong>
       {/* <Button variant="dark" onClick={()=> openTab('openPayBpay')}>Pay Bpay</Button>
       <Button variant="dark" onClick={()=> openTab('openDebitChildmAccount')}>Debit Child mAccount</Button>
