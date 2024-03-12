@@ -83,7 +83,7 @@ const V6Receivablereport = () => {
                 <Accordion.Body>
                   <form className='inputArea'>
                     <div>
-                      <section>API Key 3CAD4F77-5180-46B5-A67D-74B4D8E52665<strong className='Strongfont'>Required</strong>
+                      <section>API Key<strong className='Strongfont'>Required</strong>
   
                         <div>
                           <input type='password'
@@ -95,7 +95,7 @@ const V6Receivablereport = () => {
                       </section>
   
                       <section>
-                        <div>Date 20240312000001 <strong className='Strongfont'>Required</strong></div>
+                        <div>Date ex) 20240312000001 <strong className='Strongfont'>Required</strong></div>
   
   
                         <div>
