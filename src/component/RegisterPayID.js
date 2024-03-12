@@ -1,7 +1,7 @@
 import React from 'react'
 import Accordion from 'react-bootstrap/Accordion';
 import { useState } from 'react';
-import APIresponse from '../responseUI/APIresponse';
+import PayIDRegisterUI from '../responseUI/PayIDRegisterUI';
 import ClipLoader from "react-spinners/ClipLoader";
 
 const RegisterPayID = () => {
@@ -135,7 +135,7 @@ const RegisterPayID = () => {
         </div>
   
         <div>
-          {isSubmitted && <APIresponse result={result} className="mediaflexcolumn" />}
+          {isSubmitted && <PayIDRegisterUI result={result} className="mediaflexcolumn" />}
         </div>
         {/* <div><MobileUI result={result}/></div> */}
   

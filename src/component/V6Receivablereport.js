@@ -53,7 +53,7 @@ const V6Receivablereport = () => {
 
   
     return (
-      <div className='responseUIFlex'>
+      <div className='UImargin'>
         <div className='endpoint-style' id="V6Report">
   
           <div className='endpoint-Header'>
@@ -95,7 +95,7 @@ const V6Receivablereport = () => {
                       </section>
   
                       <section>
-                        <div>Date 20240311000001 <strong className='Strongfont'>Required</strong></div>
+                        <div>Date 20240312000001 <strong className='Strongfont'>Required</strong></div>
   
   
                         <div>

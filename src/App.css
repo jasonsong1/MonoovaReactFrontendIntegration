@@ -13,7 +13,6 @@ body{
 .ListofEndpointsize{
 width: 340px;
 height: 100vh;
-/* border:2px solid red; */
 background:rgba(240, 238, 238, 0.61);;
 padding-right: 100px;
 padding-inline-start: 0;
@@ -161,9 +160,8 @@ margin: 20px 0px;
 }
 .endpoint-style{
     background-color: #263238;
-
+    max-width: 600px;
     min-width: 600px;
-    /* height: 400px; */
     padding: 20px 20px;
     margin-left: 30px;
     margin-top: 30px;
@@ -176,7 +174,6 @@ margin: 20px 0px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     min-width: 600px;
-    /* height: 400px; */
     padding: 20px 20px;
     margin-left: 30px;
     position: relative;
@@ -217,8 +214,7 @@ margin: 20px 0px;
 .responseBody{
     color: rgb(160, 251, 170);
     width:660px;
-    /* border: 2px solid black;
-    background-color: rgb(17, 23, 26); */
+
     background-image: url(https://assets-global.website-files.com/647084263cf6196de949920f/647084263cf6196de9499292_monoova_desktop_home_hero.png);
    background-size: cover;
     margin-top: 30px;
@@ -230,9 +226,7 @@ margin: 20px 0px;
 
 }
 
-/* .responseBody div{
-    padding-top: 3px;
-} */
+
 
 .responseUIFlex{
     display: flex;
@@ -249,7 +243,10 @@ margin: 20px 0px;
     }
 }
 
-
+.UImargin{
+    margin-left:30px;
+    
+}
 
 
 
@@ -304,16 +301,16 @@ margin: 20px 0px;
    
 }
 
-.payIdTypeButtons button:hover{
-    background: #186FAF;
-    
-}
 
-.payIdTypeButtons button:focus{
+.payIdTypeButtons button.active {
     background: #186FAF;
 }
 
-.payIdTypeButtons{
+.payIdTypeButtons button:focus {
+    outline: none; 
+}
+
+.payIdTypeButtons {
     border: white solid 1px;
     background: white;
     border-radius: 20px;
@@ -322,6 +319,25 @@ margin: 20px 0px;
     margin: 10px 0px;
 }
 
-.testUI{
-    border: red solid 2px;
+
+
+.v6reportmargin{
+    margin-top: 30px;
+ 
+}
+
+.v6TDstyle{
+    padding: 12px;
+    
+}
+
+.evenRow {
+    background-color: #263238; 
+    color:white;
+    
+}
+
+
+.bsbCell {
+    min-width: 80px; 
 }

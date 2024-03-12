@@ -8,23 +8,17 @@ import ClipLoader from "react-spinners/ClipLoader";
 
 const PAYIDPayment = () => {
 
-  const [uniqueReference, setuniqueReference] = useState('')
-  const [totalAmount, settotalAmount] = useState('')
-  const [description, setdescription] = useState('')
-  const [NppCreditPayId, setNppCreditPayId] = useState('')
+
   const [payId, setpayId] = useState('')
   const [payIdType, setpayIdType] = useState('')
   const [accountName, setaccountName] = useState('')
-  const [remitterName, setremitterName] = useState('')
-  const [endToEndId, setendToEndId] = useState('')
   const [amount, setamount] = useState('')
-  const [lodgementReference, setlodgementReference] = useState('')
   const [apiKey, setapiKey] = useState('')
   const [result, setResult] = useState('')
   const [isSubmitted, setisSubmitted] = useState(false)
   const [disbursementMethod, setdisbursementMethod] = useState('NppCreditPayId')
   const [loading, setLoading] = useState(false)
-
+  const [activeButton, setActiveButton] = useState(null)
 
 
   const submitAPI = async () => {
@@ -73,7 +67,9 @@ const PAYIDPayment = () => {
 
   const handlePayIdType = (type) => {
     setpayIdType(type);
+    setActiveButton(type)
   }
+
 
 
 
@@ -171,11 +167,12 @@ const PAYIDPayment = () => {
                     <section>
                       <div className='payIdTypeButtons'>payIdType <strong className='Strongfont'>Required </strong>
                         <div>
-                          <button type="button" onClick={() => handlePayIdType('Email')} >Email</button>
-                          <button type="button" onClick={() => handlePayIdType('ABN')}>ABN</button>
-                          <button type="button" onClick={() => handlePayIdType('PhoneNumber')}>PhoneNumber</button>
-                          <button type="button" onClick={() => handlePayIdType('OrganisationId')}>OrganisationId</button>
-                          <button type="button" onClick={() => handlePayIdType('ACN')}>ACN</button>
+                          {/* <button type="button" onClick={() => handlePayIdType('Email')} >Email</button> */}
+                          <button type="button" onClick={() => handlePayIdType('Email')} className={activeButton === 'Email' ? 'active' : ''}>Email</button>
+                          <button type="button" onClick={() => handlePayIdType('ABN')} className={activeButton === 'ABN' ? 'active' : ''}>ABN</button>
+                          <button type="button" onClick={() => handlePayIdType('PhoneNumber')} className={activeButton === 'PhoneNumber' ? 'active' : ''}>PhoneNumber</button>
+                          <button type="button" onClick={() => handlePayIdType('OrganisationId')} className={activeButton === 'OrganisationId' ? 'active' : ''}>OrganisationId</button>
+                          <button type="button" onClick={() => handlePayIdType('ACN')} className={activeButton === 'ACN' ? 'active' : ''}>ACN</button>
                         </div>
                       </div>
                       {/* <input type='text'
